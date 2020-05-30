@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+{%if error%}
+<h6 style="color:red">{{ error }}</h6>
+<br/>
+<br/>
+{%endif%}
+<h1>Login</h1>
+<form method="Post" action="{%url 'login'%}">
+    {%csrf_token%}
+<div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control" id="username" placeholder="username" name="username"/>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password"/>
+  </div>
+    <button type="submit" class="btn btn-primary">login</button>
+</form>
+{% endblock %}

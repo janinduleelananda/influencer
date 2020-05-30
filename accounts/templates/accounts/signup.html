@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if error %}
+<h6 color="red">{{ error }}</h6>>
+<br/>
+<br/>
+{% endif %}
+{%load static%}
+
+<div class="card mb-3">
+  <div >
+    <img class="card-img-top" src="{%static 'coca4.jpg'%}" alt="Card image cap" height="300vw">
+    <div class="card-body">
+      <h5 class="card-title">Sign up!</h5>
+
+<p class="card-text">“Influence is when you are not the one talking and yet your words fill the room; when you are absent and yet your presence is felt everywhere.”
+<br/>- TemitOpe Ibrahim -</p>
+    </div>
+
+<form method="Post" action="{%url 'signup'%}">
+    {% csrf_token %}
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email"/>
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+<div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control" id="username" placeholder="Password" name="username"/>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password1"/>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword2">Confirm Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" name="password2"/>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Sign Up!</button>
+</form>
+{% endblock %}
