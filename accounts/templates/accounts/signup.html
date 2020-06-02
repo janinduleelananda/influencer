@@ -1,10 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-{% if error %}
-<h6 color="red">{{ error }}</h6>>
-<br/>
-<br/>
-{% endif %}
+
 {%load static%}
 
 <div class="card mb-3">
@@ -16,7 +12,11 @@
 <p class="card-text">“Influence is when you are not the one talking and yet your words fill the room; when you are absent and yet your presence is felt everywhere.”
 <br/>- TemitOpe Ibrahim -</p>
     </div>
-
+{% if error %}
+<h6 style="color:red">{{ error }}</h6>>
+<br/>
+<br/>
+{% endif %}
 <form method="Post" action="{%url 'signup'%}">
     {% csrf_token %}
   <div class="form-group">
