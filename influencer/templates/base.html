@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lobster&family=Merienda:wght@700&family=Piedra&display=swap');
+</style>
     {% load static %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -40,7 +43,7 @@
     <div class="navbar-nav ml-auto">
       <a class="nav-item nav-link " href="#">Find Influencers</a>
       {%if user.is_authenticated%}
-      <a class="nav-item nav-link" href="">My page</a>
+      <a class="nav-item nav-link" href="{%url 'profile_view'%}">Profile</a>
       <a class="nav-item nav-link" href="javascript:{document.getElementById('logout').submit()}">Log out</a>
       <form id="logout" method="POST" action="{%url 'logout'%}">
             {%csrf_token%}

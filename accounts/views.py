@@ -78,3 +78,6 @@ def delete_picture(request,picture_id):
         picture = get_object_or_404(Pictures, pk=picture_id)
         picture.delete()
         return redirect('profile_view')
+
+
+
