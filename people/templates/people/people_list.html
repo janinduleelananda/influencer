@@ -1,16 +1,25 @@
 {%extends 'base.html'%}
 {%load static%}
 {%block content%}
+<style>
+body {
+  background-image: url({%static 'background7.webp' %});
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
 {%for user in users %}
 
 <div class="row pt-3">
 <div class="col-2" onclick="window.location='{%url 'detail' user.username%}';" style="cursor:pointer">
     <img src="{{user.profile.image.url}}" class="img-fluid"/>
 </div>
-    <div class="col-2" onclick="window.location='{%url 'detail' user.username%}';" style="cursor:pointer">
-        <h1>{{user.username}}</h1>
-        <p>{{user.profile.about}}</p>
+    <div class="col-10" onclick="window.location='{%url 'detail' user.username%}';" style="cursor:pointer">
+        <h1 style="font-family: 'Merienda', cursive;" >{{user.username}}</h1>
+        <h5 style="font-family: 'Architects Daughter', cursive;">{{user.profile.about}}</h5>
     </div>
 </div>
+<br/>
 {%endfor%}
 {%endblock%}

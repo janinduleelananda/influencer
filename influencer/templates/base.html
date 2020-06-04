@@ -41,7 +41,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link " href="#">Find Influencers</a>
+      <a class="nav-item nav-link " href="{%url 'people'%}">Find Influencers</a>
       {%if user.is_authenticated%}
       <a class="nav-item nav-link" href="{%url 'profile_view'%}">Profile</a>
       <a class="nav-item nav-link" href="javascript:{document.getElementById('logout').submit()}">Log out</a>
