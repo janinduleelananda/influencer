@@ -13,21 +13,21 @@ body {
 
 
   <h1 class="display-3 text-center" style="font-family: 'Merienda', cursive;">
-    {{user.username}}
+    {{user1.username}}
   </h1>
   <br/>
 
   <section class="page-section about-heading">
 
     <div class="container">
-      <img style="width:70%" class="img-fluid rounded about-heading-img mb-3 mb-lg-0 mx-auto d-block" src="{{user.profile.image.url}}" >
+      <img style="width:70%" class="img-fluid rounded about-heading-img mb-3 mb-lg-0 mx-auto d-block"  src="{{user1.profile.image.url}}" >
       <div class="about-heading-content">
         <div class="row">
           <div class="col-xl-9 col-lg-10 mx-auto">
             <div class="bg-faded rounded p-5">
               <h2 class="section-heading mb-4 text-center" style="font-family: 'Architects Daughter', cursive;
 ">
-                <span class="section-heading-upper">{{user.profile.about}}</span>
+                <span class="section-heading-upper">{{user1.profile.about}}</span>
 
               </h2>
            </div>
@@ -44,7 +44,7 @@ body {
 
   {% for picture in pictures.all %}
 
-{% if picture.owner.username == user.username %}
+{% if picture.owner.username == user1.username %}
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
             <img src="{{picture.image.url}}" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">

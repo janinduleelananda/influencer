@@ -11,7 +11,7 @@ def people(request):
     users = User.objects.all()
     return render(request,'people/people_list.html',{'users':users})
 def detail(request,username):
-    user=get_object_or_404(User,username=username)
+    user1=get_object_or_404(User,username=username)
     pictures = Pictures.objects
-    return render(request,'people/showprofile.html',{'pictures': pictures,'user':user})
+    return render(request,'people/showprofile.html',{'pictures': pictures,'user1':user1})
 

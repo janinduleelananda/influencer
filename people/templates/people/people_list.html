@@ -14,13 +14,13 @@ body {
 
 
                 <div onclick="window.location='{%url 'detail' user.username%}';" class="row justify-content-center no-gutters mb-5 mb-lg-0">
-                    <div class="col-lg-6"><img class="img-fluid" style="width:100%" src="{{user.profile.image.url}}" alt="" /></div>
+                    <div class="col-lg-6"><img class="img-fluid" style="width:100%;cursor:pointer;" src="{{user.profile.image.url}}" alt="" /></div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-black" style="font-family: 'Merienda', cursive;">{{user.username}}</h4>
-                                    <p class="mb-0 text-black" style="font-family: 'Architects Daughter', cursive;">{{user.profile.about}}</p>
+                                    <h4 class="text-black" style="font-family: 'Merienda', cursive; cursor:pointer;">{{user.username}}</h4>
+                                    <p class="mb-0 text-black" style="font-family: 'Architects Daughter', cursive; cursor:pointer;">{{user.profile.about}}</p>
                                     <hr class="d-none d-lg-block mb-0 ml-0" />
                                 </div>
                             </div>
