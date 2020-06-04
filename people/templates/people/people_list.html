@@ -11,15 +11,22 @@ body {
 </style>
 {%for user in users %}
 
-<div class="row pt-3">
-<div class="col-2" onclick="window.location='{%url 'detail' user.username%}';" style="cursor:pointer">
-    <img src="{{user.profile.image.url}}" class="img-fluid"/>
-</div>
-    <div class="col-10" onclick="window.location='{%url 'detail' user.username%}';" style="cursor:pointer">
-        <h1 style="font-family: 'Merienda', cursive;" >{{user.username}}</h1>
-        <h5 style="font-family: 'Architects Daughter', cursive;">{{user.profile.about}}</h5>
-    </div>
-</div>
+
+
+                <div onclick="window.location='{%url 'detail' user.username%}';" class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-lg-6"><img class="img-fluid" style="width:100%" src="{{user.profile.image.url}}" alt="" /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-black" style="font-family: 'Merienda', cursive;">{{user.username}}</h4>
+                                    <p class="mb-0 text-black" style="font-family: 'Architects Daughter', cursive;">{{user.profile.about}}</p>
+                                    <hr class="d-none d-lg-block mb-0 ml-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 <br/>
 {%endfor%}
 {%endblock%}
